@@ -5,11 +5,6 @@ import './App.css'
 import Github from './Github'
 
 class App extends Component {
-
-  handleChange=(ev) => {
-    this.setState({username: ev.target.value})
-  }
-
   render() {
     return (
       <div className="App">
