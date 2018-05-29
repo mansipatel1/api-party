@@ -18,7 +18,7 @@ class App extends Component {
             <NavLink to="/github">GitHub API</NavLink>
           </li>
           <li>
-            <NavLink to="/Nasa">NASA</NavLink>
+            <NavLink to="/nasa">NASA</NavLink>
           </li>
         </ul>
         <Switch>
