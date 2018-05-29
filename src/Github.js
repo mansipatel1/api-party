@@ -16,15 +16,16 @@ class Github extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault()
     this.props.history.push(`/github/${this.state.username}`)
+    this.setState({ username: '' })
   }
 
   render() {
     return (
       <div className="Github">
         <img
+          className="logo"
           src="http://www.aha.io/assets/github.7433692cabbfa132f34adb034e7909fa.png"
           alt="GitHub"
-          className="logo"
         />
         <form onSubmit={this.handleSubmit}>
           <div>
