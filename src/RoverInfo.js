@@ -23,7 +23,20 @@ class RoverInfo extends Component {
       .then(response => response.json())
       .then(data => {
         let rover = {}
-        if (data.photos.length > 0) {
+        try{
+                    rover = {
+                      name: data.photos[0].rover.name,
+                      imageUrl: data.photos[0].img_src,
+                      earthDate: data.photos[0].earth_date,
+                    }
+                  } catch(error){
+                    rover = {
+                      name: props.match.params.rover,
+                      imageUrl: null,
+                      earthDate: 'No images for that rover on that date.'
+                    }
+                  }
+       /* if (data.photos.length > 0) {
           rover = {
             name: data.photos[0].rover.name,
             imageUrl: data.photos[0].img_src,
@@ -36,6 +49,7 @@ class RoverInfo extends Component {
             earthDate: 'No images for that rover on that date.'
           }
         }
+        */
         this.setState({ rover })
       })
   }
