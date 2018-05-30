@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Itunes.css'
 
+
 class ItunesInfo extends Component {
   constructor(props) {
     super(props)
@@ -35,7 +36,7 @@ class ItunesInfo extends Component {
                     artist: data.results[0].artistName,
                     album: data.results[0].collectionName,
                     image: data.results[0].artworkUrl100,
-                    preview: data.results[0].previewURL,
+                    preview: data.results[0].previewUrl,
                   }
                 }
         catch(error){
@@ -51,13 +52,16 @@ class ItunesInfo extends Component {
 
   render() {
 
-    const {name, artist, album,image,preview} = this.state.song
+    const {name,
+            artist, album,image,preview
+          } = this.state.song
     return (
       <div className="ItunesInfo">
-      <a href={preview} > 
-      <img className= "image" src={image} alt="" />
-      </a>
-    
+      <a href={preview} target="_blank">
+      <img className="image" src={image} alt="Song Cover"/>
+        <div>
+        </div>
+         </a> 
        <h3>Song: {name}</h3>
        <h3>Artist: {artist}</h3>
        <h3>Album: {album}</h3> 
