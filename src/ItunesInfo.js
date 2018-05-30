@@ -59,12 +59,15 @@ class ItunesInfo extends Component {
       <div className="ItunesInfo">
       <a href={preview} target="_blank">
       <img className="image" src={image} alt="Song Cover"/>
+      <h2> Click to hear preview</h2>
         <div>
         </div>
          </a> 
+         <div className="box">
        <h3>Song: {name}</h3>
        <h3>Artist: {artist}</h3>
        <h3>Album: {album}</h3> 
+       </div>
       </div>
     )
   }

@@ -30,7 +30,7 @@ class Itunes extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <input
-              type="text"
+              type="text" placeholder="Type Song Title Here" className="input"
               value={this.state.song}
               onChange={this.handleChange}
             />

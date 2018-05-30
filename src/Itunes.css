@@ -25,6 +25,7 @@ body{
     border-radius: 5px;
     line-height: 20px;
     border: 1px solid #d1d5da;
+  
   }
   
   .Itunes button {
@@ -40,10 +41,22 @@ body{
     font-family: "Helvetica", serif;
   }
 
+  .Itunes .input{
+    text-align: center;
+  }
+
 
 .ItunesInfo .image {
   width: 200px;
   height: 200px;
+  border-style:double;
+  border-width: 30px;
+  border-color: black;
+ 
+}
+.ItunesInfo .box {
+  width: 100%;
+  height: 100%;
   border-style:double;
   border-width: 30px;
   border-color: black;
